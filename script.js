@@ -10,7 +10,7 @@ clear.onclick = ()=>{
 	calc_screen.innerHTML = "";
 }
 function calculate(e){
-	let number = result;
+	let number = result.replace(",", ".");
 	result = "";
 
 	if (e==="=") {
@@ -33,6 +33,6 @@ btnNumber.forEach((item)=>{
 		if (result.length >= 8) {
 			calc_screen.style.fontSize = "25px";
 		}
-		calc_screen.innerHTML = result;
+		calc_screen.innerHTML = result.replace(",", ".");
 	}
 })
