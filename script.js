@@ -17,11 +17,12 @@ function calculate(e){
 		arrayString.push(number);
 		let total = eval(arrayString.join(""));
 
-		calc_screen.innerHTML = total;
-		arrayString = [];
+		calc_screen.innerHTML = total || "0";
+		
+	}else {
+		arrayString.push(number);
+		arrayString.push(e); 
 	}
-	arrayString.push(number);
-	arrayString.push(e); 
 }
 
 btnNumber.forEach((item)=>{
