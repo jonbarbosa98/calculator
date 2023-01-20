@@ -27,16 +27,12 @@ function calculate(e){
 btnNumber.forEach((item)=>{
 	item.onclick = (e)=> {
 		let text = e.target.innerText;
-		if (result === "0") {
-			result = "0";
-		}
 		if (result.length<=15) {
 			result += text;
 		}
 		if (result.length >= 8) {
 			calc_screen.style.fontSize = "25px";
 		}
-
 		calc_screen.innerHTML = result;
 	}
 })
